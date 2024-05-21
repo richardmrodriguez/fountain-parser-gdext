@@ -1,0 +1,13 @@
+[package]
+name = "fountain-parser-gdext"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fountain-parser-rs = "0.4.0"
+godot = { git = "https://github.com/godot-rust/gdext", branch = "master"}
