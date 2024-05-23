@@ -64,6 +64,8 @@ struct FNLineGD {
     fn_type: GString,
     #[var]
     is_type_forced: GString,
+    #[var]
+    uuid: GString,
     base: Base<Node>,
 }
 
@@ -75,7 +77,8 @@ impl INode for FNLineGD {
             pos: 0.to_godot(),
             fn_type: "Unparsed".to_godot(),
             is_type_forced: "false".to_string().to_godot(),
-            base: base,
+            uuid: "".to_godot(),
+            base,
         }
     }
 }
