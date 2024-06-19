@@ -51,38 +51,6 @@ impl FountainParser {
     }
 }
 
-// FNLine struct for godot
-
-#[derive(GodotClass)]
-#[class(base=Node)]
-struct FNLineGD {
-    #[var]
-    string: GString,
-    #[var]
-    pos: i32,
-    #[var]
-    fn_type: GString,
-    #[var]
-    is_type_forced: GString,
-    #[var]
-    uuid: GString,
-    base: Base<Node>,
-}
-
-#[godot_api]
-impl INode for FNLineGD {
-    fn init(base: Base<Node>) -> Self {
-        Self {
-            string: "".to_godot(),
-            pos: 0.to_godot(),
-            fn_type: "Unparsed".to_godot(),
-            is_type_forced: "false".to_string().to_godot(),
-            uuid: "".to_godot(),
-            base,
-        }
-    }
-}
-
 // Extension tag
 struct MyExtension;
 
